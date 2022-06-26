@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section id="wrapper">
+<!-- ----------MODAL --------->
+<div class="modal" id="shopping-box">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h2 class="ps-2">Your Cart</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>	
+        </div>
+        
+        <div class="modal-body row">
+          <div class="modal-body">
+            <div class="cart-row d-flex">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span> 
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span> 
+        </div>
+            <div class="cart-items"> </div>
+            <div class="cart-total"> <strong class="cart-total-title">Total</strong><span> $</span> <span class="cart-total-price text-danger">0</span> </div>
+            <button class="btn btn-primary btn-purchase" type="button" onClick="thanhtoan()">Thanh toán</button>
+          </div>
+        
+        <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trigger the modal with a button -->
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"></button> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade container" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+    <!-- Modal content-->
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Modal Header</h4>
+    </div>
+    <div class="modal-body">
+    <p>Some text in the modal.</p>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+        <!-- Header Section -->
+<header >
+    <nav class="navbar mt-3 navbar-expand-lg navbar-light fixed-top">
+        <div class="container rounded-3 p-2 bg-secondary">
+            <a class="navbar-brand" href="main.html">
+                <img class="img-fluid" src="img/logo chữ-01.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar" aria-label="Toggle">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mob-navbar">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Wedding Flower</a></li>
+                            <li><a class="dropdown-item" href="#">Event Flower</a></li>
+                            <li><a class="dropdown-item" href="#">Occassion Flower</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">Explore</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                   
+                    <button href="#shopping-box" data-bs-toggle="modal" class="btn-dark" type="button" style="font-size: 20px;">
+                        <span> Cart</span>
+                        <span class="text-danger" id="sl">0</span>
+                      </button>
+                    
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Banner -->
+<div class="hbanner3 d-flex align-items-center  justify-content-center text-center img-fluid text-white" >
+    <!-- <h2 style="font-size: 7rem;">About us</h2> -->
+ </div>
+<!-- Detail -->
+<div class="bg-secondary post1 container text-center">
+    
+    <ul class="breadcrumb mt-5 p-3 ms-1">
+        <li class="breadcrumb-item"><a href="main.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="product.html">Products</a></li>
+        <li class="breadcrumb-item"><a href="#">Flower Baskets</a></li>
+        <li class="breadcrumb-item"><a href="#">Bright Future</a></li>
+      </ul>
+    <div class="row ">
+    <div class="col-lg-7 col-10 row">
+        <div class="col-2 sm-img">
+            <div class="mt-2 border-bottom img-fluid"><img src="img/basket 16.jpeg"></div>
+            <div class="mt-2 border-bottom img-fluid"><img src="img/basket 16.jpeg"></div>
+            <div class="mt-2 border-bottom img-fluid"><img src="img/basket 16.jpeg"></div>
+            
+        </div>
+        <div class="col-10  id="spham"  rounded-3">
+            <div><img class="shop-item-image img-fluid" src="img/basket 16.jpeg"></div>
+        </div>
+    </div>
+    <div class="col-10 col-lg-5 text-left ">
+        <h6 class="ms-1 shop-item-title">Bright Future</h6>
+        <div class="rating mt-4 ">
+            <input type="radio" name="rating-star" class="rating__control screen-reader" id="rc1">
+            <input type="radio" name="rating-star" class="rating__control screen-reader" id="rc2">
+            <input type="radio" name="rating-star" class="rating__control screen-reader" id="rc3">
+            <input type="radio" name="rating-star" class="rating__control screen-reader" id="rc4">
+            <input type="radio" name="rating-star" class="rating__control screen-reader" id="rc5">
+            <label for="rc1" class="rating__item">
+              <svg class="rating__star">
+                <use xlink:href="#star"></use>
+              </svg>
+              <span class="screen-reader">1</span>
+            </label>
+            <label for="rc2" class="rating__item">
+              <svg class="rating__star">
+                <use xlink:href="#star"></use>
+              </svg>
+              <span class="screen-reader">2</span>
+            </label>
+            <label for="rc3" class="rating__item">
+              <svg class="rating__star">
+                <use xlink:href="#star"></use>
+              </svg>
+              <span class="screen-reader">3</span>
+            </label>
+            <label for="rc4" class="rating__item">
+              <svg class="rating__star">
+                <use xlink:href="#star"></use>
+              </svg>
+              <span class="screen-reader">4</span>
+            </label>
+            <label for="rc5" class="rating__item">
+              <svg class="rating__star">
+                <use xlink:href="#star"></use>
+              </svg>
+              <span class="screen-reader">5</span>
+            </label>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+            <symbol id="star" viewBox="0 0 26 28">
+              <path d="M26 10.109c0 .281-.203.547-.406.75l-5.672 5.531 1.344 7.812c.016.109.016.203.016.313 0 .406-.187.781-.641.781a1.27 1.27 0 0 1-.625-.187L13 21.422l-7.016 3.687c-.203.109-.406.187-.625.187-.453 0-.656-.375-.656-.781 0-.109.016-.203.031-.313l1.344-7.812L.39 10.859c-.187-.203-.391-.469-.391-.75 0-.469.484-.656.875-.719l7.844-1.141 3.516-7.109c.141-.297.406-.641.766-.641s.625.344.766.641l3.516 7.109 7.844 1.141c.375.063.875.25.875.719z" />
+            </symbol>
+          </svg>
+        <div class="mt-4 "><h2 class="d-inline ms-2  text-primary shop-item-price">$48.00 USD</h2>
+        <h3 class="d-inline ms-5" style="text-decoration:line-through">$55.00</h3></div>
+        <div class="d-flex justify-content-between">
+        <div class="size mt-5 ms-2">
+            <h4 style="margin-bottom: 20px">Size</h4>
+            <p class="d-inline">S</p>
+            <p class="d-inline ms-4">M</p>
+            <p class="d-inline ms-4">L</p>
+            <p class="d-inline ms-4">XL</p>
+        </div>
+        
+        <div class="d-inline mt-5">
+            <h4>Quantity</h4>
+            <div class="quantity d-flex d-lg-flex form-control">
+                <input type="number" class="form-control-plaintext" style="font-size: 1.2rem" placeholder="1">
+                </div>
+        </div>
+    </div>
+    <div class="mt-4 ">
+    <button type="button" class="align-middle d-inline atc shop-item-button">Add to cart</button>
+    <span class="heart ms-3 align-middle fa fa-heart aria-hidden="true" d-inline ms-3" style="font-size: 2rem;">
+        
+        </span></div>
+    <div class="tabs mt-5">
+
+    <input type="radio" name="tabs" id="tabone" checked="checked">
+    <label for="tabone" class="d-flex border-bottom justify-content-between">
+        <h4>Description</h4>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </label>
+    <div class="tab mt-2">
+      <p>A timeless classic and nothing says like a bouquet of fresh red kenya roses (6 stalks) with mix of cappuccino roses, Holland tulips, Holland astilbe, Holland carnations, matthiola, eucalyptus etc.  
+<br>
+        Flower Basket comes with a carrier and complimentary message card. 
+        </p>
+    </div>
+
+    <input type="radio" name="tabs" id="tabtwo">
+    <label for="tabtwo" class="d-flex border-bottom mt-3 justify-content-between">
+        <h4>Note</h4>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </label>
+    <div class="tab mt-2">
+      <p> Image shown is for reference only.<br>
+        The arrangement may not look exactly the same as pictured. Filler flowers & foliage are subject to change based on availability.
+</p>
+    </div>
+    <input type="radio" name="tabs" id="tabthree">
+    <label for="tabthree" class="d-flex border-bottom justify-content-between">
+        <h4>Review</h4>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </label>
+    <div class="tab mt-2">
+      <p>There is no review yet. You could be the first one to make this happen.
+        </p>
+    </div>
+    </div>
+    <div class="d-flex mt-3">
+      <p class="me-5">Share this</p>
+      <i class="fa fa-facebook-official ms-3" aria-hidden="true"></i>
+      <i class="fa fa-pinterest-square ms-3" aria-hidden="true"></i>
+      <i class="fa fa-twitter-square ms-3" aria-hidden="true"></i>
+      <i class="fa fa-google-plus-square ms-3" aria-hidden="true"></i>
+    </div>
+  </div>
+            
+    </div> 
+  <!-- You might also need -->
+  <section class="mt-5 row">
+    <h3>You might also need</h3>
+    <div id="spham" class="tabcontent col-10 col-offset-1">
+      <div class="row">
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/36.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Mindful Soul</b></h4> 
+                <div class="d-block d-md-block d-lg-flex  justify-between">
+                  <p>$39.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/39.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Rosie</b></h4> 
+                <div class="d-block d-md-block d-lg-flex  justify-between">
+                  <p>$72.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/den5.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Red & Black</b></h4> 
+                <div class="d-block d-md-block d-lg-flex justify-between">
+                  <p>$52.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/g5.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Surprise</b></h4> 
+                <div class="d-block d-md-block d-lg-flex justify-between">
+                  <p>$68.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/g6.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Flower tray</b></h4> 
+                <div class="d-block d-md-block d-lg-flex justify-between">
+                  <p>$43.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/den2.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Dark Beauty</b></h4> 
+                <div class="d-block d-md-block d-lg-flex justify-between">
+                  <p>$53.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/lh12.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Magnificent</b></h4> 
+                <div class="d-block d-md-block d-lg-flex justify-between">
+                  <p>$67.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        <a href="#/"  class="col-6 col-md-3 col-lg-3">
+          <div class="card-tab">
+              <div class="card-img rounded-2">
+                  <img src="/img/untitled folder/g10.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="card-content text-left">
+                <h4><b>Palette</b></h4> 
+                <div class="d-block d-md-block d-lg-flex justify-between">
+                  <p>$38.00</p> 
+                  <div class="upsize">
+                  <i class="ms-1 fa fa-cart-plus" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-heart" aria-hidden="true"></i>
+                  <i class="ms-1 fa fa-search" aria-hidden="true"></i>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </a>
+        
+  </section>
+  <a href="product.html" class="bg-primary text-white btn btn-primary mt-3 mb-3">All Products</a>
+    </div>
+    </div>
+
+</div>
+</div>
+<!-- Footer -->
+<footer class="phancuoi bg-light row justify-content-center align-items-center text-black">
+    <div class=" fter col-12 justify-content-center text-center">
+    <img class="col-md-3 col-6 " src="img/logo.png">
+    <p class="note col-12">We can do same day flower delivery for order received before 12 noon of that particular day.
+     However, certain flowers, wrapping papers, vases and other items may not be available due to seasonal differences or inventory shortage. We reserve the right to make substitution with similar materials or items that are of equivalent or greater value at our discretion, without prior notice.</p>
+    </div>
+    <div class="d-flex align-items-top justify-content-center">
+  <div class="col-6 col-md-3 text-right mb-3 ">
+    <h3>Open Hours</h3>
+    <p>Monday: <b>Closed</b></p>
+  <p>Tuesday to Friday:<br>
+      <b>7:00 AM - 9:00 PM</b></p>
+  <p>Saturday to Sunday:<br>
+      <b>11:00 AM - 10:00 PM</b></p>
+  </div>
+  <div class="col-5 col-md-3">
+    <h3>Find us</h3>
+    <p>4578 Marmora Road, Glasgow 89GR<br>
+        info@coisini.com<br>
+        1-800-1234-567<br>
+        +44 987-654-3210</p>
+  </div>
+  </div>
+  <div class="border text-center bottom-0">Copyright © 2010 Coisini. | Powered by Azolia Inc. </div>
+  </footer>
+
+</div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script> openCity(evt, cityName)
+        </script>
+    <script src="js/product.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
